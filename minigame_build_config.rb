@@ -40,5 +40,5 @@ MRuby::Build.new('test') do |conf|
 
   conf.gembox 'full-core'
 
-  conf.file_separator = '/'
+  #conf.file_separator = '/'
 end
