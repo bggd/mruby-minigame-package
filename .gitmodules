@@ -1,3 +1,6 @@
 [submodule "mruby"]
 	path = mruby
 	url = https://github.com/mruby/mruby
+[submodule "mruby-minigame"]
+	path = mruby-minigame
+	url = https://github.com/bggd/mruby-minigame
