@@ -25,8 +25,8 @@ build_script:
 
 
 test_script:
-  - set MRUBY_CONFIG=..\minigame_build_config.rb
   - cd mruby
+  - set MRUBY_CONFIG=..\minigame_build_config.rb
   - ruby .\minirake test
 
 
