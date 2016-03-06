@@ -5,12 +5,16 @@ os: Visual Studio 2015
 clone_depth: 1
 
 
+init:
+  - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
+  - set PATH=C:\cygwin\bin;%PATH%
+
+
 install:
   - git submodule update --init --recursive
 
 
 build_script:
-  - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
   - cd mruby
   - set MRUBY_CONFIG=..\minigame_build_config.rb
   - ruby .\minirake
