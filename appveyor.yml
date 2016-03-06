@@ -21,7 +21,13 @@ install:
 
 build_script:
   - set MRUBY_CONFIG=minigame_build_config.rb
-  - ruby mruby\minirake -f mruby\Rakefile test
+  - ruby mruby\minirake -f mruby\Rakefile
+
+
+test_script:
+  - cd mruby
+  - set MRUBY_CONFIG=..\minigame_build_config.rb
+  - ruby .\minirake test
 
 
 artifacts:
