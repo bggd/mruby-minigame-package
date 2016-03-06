@@ -6,15 +6,16 @@ shallow_clone: true
 
 clone_depth: 1
 
-#install:
 
-before_build:
+install:
   - git submodule update --init --recursive
+
 
 build_script:
   - cd mruby
   - set MRUBY_CONFIG=..\minigame_build_config.rb
   - ruby .\minirake
+
 
 test_script:
   - ruby .\minirake test
