@@ -4,6 +4,11 @@ os: Visual Studio 2015
 
 clone_depth: 1
 
+A5_INC_DIR: %clone_folder%\Allegro\build\native\include
+A5_LIB_DIR: %clone_folder%\Allegro\build\native\v140\x64\lib
+A5DEPS_INC_DIR: %clone_folder%\AllegroDeps\build\native\include
+A5_LIB_DIR: %clone_folder%\AllegroDeps\build\native\v140\x64\deps\lib
+
 
 init:
   - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
@@ -12,6 +17,8 @@ init:
 
 install:
   - git submodule update --init --recursive
+  - nuget install Allegro -Version 5.1.13.1 -ExcludeVersion
+  - nuget install AllegroDeps -Version 1.4.0 -ExcludeVersion
 
 
 build_script:
