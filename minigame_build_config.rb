@@ -24,8 +24,5 @@ MRuby::Build.new do |conf|
     g.linker.libraries = %w(allegro_monolith-static dumb FLAC ogg vorbis vorbisfile freetype jpeg libpng16 zlib opengl32 user32 ole32 gdi32 winmm psapi shell32 shlwapi)
   end
 
-  conf.enable_bintest
   conf.enable_test
-
-  conf.file_separator = '/'
 end

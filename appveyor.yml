@@ -25,10 +25,8 @@ build_script:
 
 
 test_script:
-  - cd mruby
-  - set MRUBY_CONFIG=..\minigame_build_config.rb
-  - ruby .\minirake test
+  - ruby mruby\minirake -f mruby\Rakefile test
 
 
-#artifacts:
-#  - path: mruby\bin
+artifacts:
+  - path: mruby\bin
