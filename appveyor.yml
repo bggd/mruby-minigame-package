@@ -7,7 +7,6 @@ clone_depth: 1
 environment:
   A5_INC_DIR: APPVEYOR_BUILD_FOLDER\Allegro\build\native\include
   A5_LIB_DIR: APPVEYOR_BUILD_FOLDERAllegro\build\native\v140\x64\lib
-  A5DEPS_INC_DIR: APPVEYOR_BUILD_FOLDER\AllegroDeps\build\native\include
   A5DEPS_LIB_DIR: APPVEYOR_BUILD_FOLDER\AllegroDeps\build\native\v140\x64\deps\lib
 
 
@@ -17,7 +16,7 @@ init:
 
 
 install:
-  - git submodule update --init --recursive
+  - git submodule update --init --recursive --depth 1
   - nuget install Allegro -Version 5.1.13.1 -ExcludeVersion
   - nuget install AllegroDeps -Version 1.4.0 -ExcludeVersion
 
@@ -28,4 +27,4 @@ build_script:
 
 
 test_script:
-  - ruby .\minirake test
+  - ruby mruby\minirake test
