@@ -10,6 +10,7 @@ install:
 
 
 build_script:
+  - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
   - cd mruby
   - set MRUBY_CONFIG=..\minigame_build_config.rb
   - ruby .\minirake
