@@ -7,7 +7,7 @@ clone_depth: 1
 
 init:
   - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
-  - set PATH=C:\cygwin\bin;%PATH%
+  - set PATH=%PATH%;C:\cygwin\bin;
 
 
 install:
