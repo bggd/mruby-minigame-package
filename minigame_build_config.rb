@@ -12,9 +12,9 @@ MRuby::Build.new do |conf|
 
   conf.linker do |linker|
     # ignore many warning for linking Allegro5
-    linker.link_options = '/ignore:4099'
+    linker.flags << '/ignore:4099'
 
-    linker.link_options += ' /SUBSYSTEM:WINDOWS'
+    linker.flags << '/SUBSYSTEM:WINDOWS'
   end
 
   conf.gembox 'full-core'
