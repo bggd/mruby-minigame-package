@@ -25,4 +25,8 @@ build_script:
 
 
 test_script:
-  - ruby mruby\minirake test
+  - ruby mruby\minirake -f mruby\Rakefile test
+
+
+artifacts:
+  - path: mruby\bin
