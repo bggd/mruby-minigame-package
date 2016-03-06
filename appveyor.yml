@@ -30,5 +30,5 @@ test_script:
   - ruby .\minirake test
 
 
-artifacts:
-  - path: mruby\bin
+#artifacts:
+#  - path: mruby\bin
