@@ -4,10 +4,11 @@ os: Visual Studio 2015
 
 clone_depth: 1
 
-A5_INC_DIR: %clone_folder%\Allegro\build\native\include
-A5_LIB_DIR: %clone_folder%\Allegro\build\native\v140\x64\lib
-A5DEPS_INC_DIR: %clone_folder%\AllegroDeps\build\native\include
-A5_LIB_DIR: %clone_folder%\AllegroDeps\build\native\v140\x64\deps\lib
+environment:
+  A5_INC_DIR: APPVEYOR_BUILD_FOLDER\Allegro\build\native\include
+  A5_LIB_DIR: APPVEYOR_BUILD_FOLDERAllegro\build\native\v140\x64\lib
+  A5DEPS_INC_DIR: APPVEYOR_BUILD_FOLDER\AllegroDeps\build\native\include
+  A5DEPS_LIB_DIR: APPVEYOR_BUILD_FOLDER\AllegroDeps\build\native\v140\x64\deps\lib
 
 
 init:
