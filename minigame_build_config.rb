@@ -22,7 +22,6 @@ MRuby::Build.new do |conf|
     g.cc.include_paths << ENV['A5_INC_DIR']
     g.linker.library_paths << ENV['A5_LIB_DIR'] << ENV['A5DEPS_LIB_DIR']
     g.linker.libraries = %w(allegro_monolith-static dumb FLAC ogg vorbis vorbisfile freetype jpeg libpng16 zlib opengl32 user32 ole32 gdi32 winmm psapi shell32 shlwapi)
-    g.linker.flags << '/SUBSYSTEM:CONSOLE'
   end
 end
 
@@ -41,5 +40,5 @@ MRuby::Build.new('test') do |conf|
 
   conf.gembox 'full-core'
 
-  #conf.file_separator = '/'
+  conf.file_separator = '/'
 end
