@@ -1,10 +1,5 @@
 MRuby::Build.new do |conf|
-  # Gets set by the VS command prompts.
-  if ENV['VisualStudioVersion'] || ENV['VSINSTALLDIR']
-    toolchain :visualcpp
-  else
-    toolchain :gcc
-  end
+  toolchain :visualcpp
 
   conf.cc do |cc|
     cc.flags = %w(/c /nologo /W3 /we4013 /MT /O2 /D_CRT_SECURE_NO_WARNINGS)
@@ -21,16 +16,12 @@ MRuby::Build.new do |conf|
     g.cc.defines << 'ALLEGRO_STATICLINK'
     g.cc.include_paths << ENV['A5_INC_DIR']
     g.linker.library_paths << ENV['A5_LIB_DIR'] << ENV['A5DEPS_LIB_DIR']
-    g.linker.libraries = %w(allegro_monolith-static dumb FLAC ogg vorbis vorbisfile freetype jpeg libpng16 zlib opengl32 user32 ole32 gdi32 winmm psapi shell32 shlwapi)
+    g.linker.libraries = %w(allegro_monolith-static dumb FLAC ogg vorbis vorbisfile freetype jpeg libpng16 zlib opengl32 user32 ole32 gdi32 winmm psapi shell32 shlwapi dsound)
   end
 end
 
 MRuby::Build.new('test') do |conf|
-  if ENV['VisualStudioVersion'] || ENV['VSINSTALLDIR']
-    toolchain :visualcpp
-  else
-    toolchain :gcc
-  end
+  toolchain :visualcpp
 
   enable_debug
 

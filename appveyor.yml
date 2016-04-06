@@ -12,7 +12,7 @@ init:
 
 install:
   - git submodule update --init --recursive
-  - nuget install Allegro -Version 5.1.13.1 -ExcludeVersion
+  - nuget install Allegro -Version 5.2.0.0 -ExcludeVersion
   - nuget install AllegroDeps -Version 1.4.0 -ExcludeVersion
   - set A5_INC_DIR=%APPVEYOR_BUILD_FOLDER%\Allegro\build\native\include
   - set A5_LIB_DIR=%APPVEYOR_BUILD_FOLDER%\Allegro\build\native\v140\x64\lib
