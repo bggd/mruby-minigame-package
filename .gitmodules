@@ -4,3 +4,6 @@
 [submodule "mruby-minigame"]
 	path = mruby-minigame
 	url = https://github.com/bggd/mruby-minigame
+[submodule "mruby-gamepad"]
+	path = mruby-gamepad
+	url = https://github.com/bggd/mruby-gamepad
